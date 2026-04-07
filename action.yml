@@ -103,6 +103,7 @@ runs:
         bootstrap_linux_amd64_sha="db15cc99e6e4837daabab023742aaddc3841ce57f193d11b7c3e06c8003642b2"
         bootstrap_linux_arm_sha="4866f388e87125f1f492231dbbb347bb73b601c810595b65b2ae09eae4c8a99d"
         bootstrap_linux_arm64_sha="d098f3168ae4b3aa70b4ca78947329b953272b487727d1722cb3cb098a1a20ab"
+        bootstrap_linux_riscv64_sha="9d108e72249dacb6ef5685320f34efcd0d85b842df90552b8fd7903a39a11c98"
         bootstrap_darwin_amd64_sha="e032c44d3f7c247bbb2966b41239f88ffba002497a4516358d327ad5693c386f"
         bootstrap_darwin_arm64_sha="4888c898e2901521a6bd4cf4f0383c9465588a6a46ecd2465ad34faf13f09eb7"
         bootstrap_windows_amd64_sha="44e9e44202b67ddfaaf5ea1234f5a265417960c4ae98c5b57c35bc40ba9dd714"
@@ -132,6 +133,12 @@ runs:
                 bootstrap_filename='cosign-linux-arm64'
                 bootstrap_sha=${bootstrap_linux_arm64_sha}
                 desired_cosign_filename='cosign-linux-arm64'
+                ;;
+
+              RISCV64|riscv64)
+                bootstrap_filename='cosign-linux-riscv64'
+                bootstrap_sha=${bootstrap_linux_riscv64_sha}
+                desired_cosign_filename='cosign-linux-riscv64'
                 ;;
 
               *)
